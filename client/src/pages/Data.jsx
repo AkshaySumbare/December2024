@@ -84,9 +84,9 @@ export const Cartegory = () => {
 
       <div className="">
         <div className="flex justify-between">
-          <div className="mt-5 ml-3">Category</div>
+          <div className="mt-5 ml-3">Attendence</div>
           <div className=" mt-5">
-            <Link to={"create-Data"}>
+            <Link to={"/dashboard/create-Data"}>
               <Button
                 color="red"
                 className="border-2 rounded-md w-36 h-8 bg-fuchsia-700 border-black p-1 text-red-50 "
@@ -168,7 +168,7 @@ export const Cartegory = () => {
                 )}
               </>
             ) : (
-              <p>You have no post yet!</p>
+              <p>You have no Data yet!</p>
             )}
             <Modal
               show={showModal}
@@ -182,7 +182,7 @@ export const Cartegory = () => {
                   <span className="text-center  border-2 black">
                     <HiOutlineExclamationCircle className="h-14 w-14 text-gray-400 dark:text-gray-200 mb-4 mx-auto" />
                     <h3 className="mb-5 text-lg text-gray-500 dark:text-gray-400">
-                      Are you sure you want to delete this post
+                      Are you sure you want to delete this Data
                     </h3>
                     <span className="flex justify-center gap-4">
                       <Button

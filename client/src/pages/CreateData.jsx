@@ -1,11 +1,9 @@
 
 import React, { useState } from "react";
 import { Alert, Button, Select, TextInput } from "flowbite-react";
-import "react-quill/dist/quill.snow.css";
-import "react-circular-progressbar/dist/styles.css";
 import { useNavigate } from "react-router-dom";
 export const CreateData = () => {
-  
+
   const [formData, setFormData] = useState({});
   const [publishError, setPublishError] = useState(null);
   const navigate = useNavigate();
@@ -32,7 +30,7 @@ export const CreateData = () => {
       if (res.ok) {
         setPublishError(null);
 
-        navigate(`/dashboard?tab=Category`);
+        navigate(`/Data`);
       }
     } catch (error) {
       setPublishError("Something went wrong");
@@ -40,7 +38,7 @@ export const CreateData = () => {
   };
 
   const handleCancle = () => {
-    navigate(`/dashboard?tab=Category`);
+    navigate(`/Data`);
   };
 
   return (
@@ -54,7 +52,7 @@ export const CreateData = () => {
             <div className="flex  gap-4 sm:flex-row   justify-between">
               <TextInput
                 type="text"
-                placeholder=" Name "
+                placeholder=" Add Name "
                 required
                 id="title"
                 className="flex-1"
@@ -70,8 +68,8 @@ export const CreateData = () => {
                   }
                 >
                   <option value="Active">Select status</option>
-                  <option value="Active">present</option>
-                  <option value="Deactive">Absent</option>
+                  <option value="Present">present</option>
+                  <option value="Absent">Absent</option>
                 </Select>
               </div>
             </div>
@@ -103,7 +101,6 @@ export const CreateData = () => {
         </div>
       </div>
 
-      {/* ********** */}
     </>
   );
 };

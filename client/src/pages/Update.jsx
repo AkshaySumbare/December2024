@@ -62,14 +62,14 @@ export const Update = () => {
       if (res.ok) {
         setPublishError(null);
 
-        navigate(`/dashboard?tab=Category`);
+        navigate(`/Data`);
       }
     } catch (error) {
       setPublishError("Something went wrong");
     }
   };
   const handleCancle = () => {
-    navigate(`/dashboard?tab=Category`);
+    navigate(`/Data`);
   };
   return (
     <div className="flex">
@@ -102,8 +102,8 @@ export const Update = () => {
             >
               <option value="uncategorize">Select Status</option>
 
-              <option value="Active">Present</option>
-              <option value="Deactive">Absent</option>
+              <option value="Present">Present</option>
+              <option value="Absent">Absent</option>
             </Select>
           </div>
 
